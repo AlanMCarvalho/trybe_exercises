@@ -1,0 +1,18 @@
+html{
+    width: auto;
+}
+
+.titulo {
+font: bolder 35px arial;
+text-decoration: underline;
+text-align: center;
+}
+
+#nome {
+    color: red
+    font-style: italic;
+}
+
+.foto{
+    align-items: baseline;
+}
