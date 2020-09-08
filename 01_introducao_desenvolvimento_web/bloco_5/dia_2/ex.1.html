@@ -88,18 +88,17 @@
     img.className = "small-image";
     img.src = "https://picsum.photos/200";
     divLeft.appendChild(img);
-    
+    //ex.8
+    const list = document.createElement("ul");
+    divrigth.appendChild(list);
+    const arrayDeNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+    for( let i in arrayDeNumeros) {
+      const elementLi = document.createElement("li");
+      elementLi.innerHTML = arrayDeNumeros[i];
+      list.appendChild(elementLi);
+    }
 
 
-
-
-
-
-
-
-
-
-      
   </script>
 </body>
   
