@@ -97,7 +97,12 @@
       elementLi.innerHTML = arrayDeNumeros[i];
       list.appendChild(elementLi);
     }
-
+    //ex.9
+    for(i=0; i<3; i+=1) {
+      const tagH3 = document.createElement("H3");
+      tagH3.innerHTML = "texto para tag h3" + " " + i;
+      divMain.appendChild(tagH3)
+    }  
 
   </script>
 </body>
