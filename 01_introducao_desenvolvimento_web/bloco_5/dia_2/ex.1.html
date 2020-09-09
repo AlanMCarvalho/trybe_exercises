@@ -79,16 +79,51 @@
     const divLeft = document.createElement("div");
     divLeft.className = "left-content";
     divMain.appendChild(divLeft);
+    //ex.6
+    const divrigth = document.createElement("div");
+    divrigth.className = "rigth-content";
+    divMain.appendChild(divrigth);
+    //ex.7
+    const img = document.createElement("img");
+    img.className = "small-image";
+    img.src = "https://picsum.photos/200";
+    divLeft.appendChild(img);
+    //ex.8
+    const list = document.createElement("ul");
+    divrigth.appendChild(list);
+    const arrayDeNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+    for( let i in arrayDeNumeros) {
+      const elementLi = document.createElement("li");
+      elementLi.innerHTML = arrayDeNumeros[i];
+      list.appendChild(elementLi);
+    }
+    //ex.9
+    for(i=0; i<3; i+=1) {
+      const tagH3 = document.createElement("H3");
+      tagH3.innerHTML = "texto para tag h3" + " " + i;
+      divMain.appendChild(tagH3)
+    }
+
+    //ex1.P2
+    texto.className = "title";
+    //ex2.P2
+    const description = document.getElementsByTagName("H3");
+    for(i=0; i<3; i+=1) {
+      description[i].className = "description";
+    }
+    //ex3.P2
+    const removeLeftContent = document.getElementsByClassName("left-content")[0];
+    divMain.removeChild(removeLeftContent);
+    //ex4.P2
+    const centralizarDiv = document.getElementsByClassName("rigth-content")[0];
+    centralizarDiv.style.marginRight = "auto";
+    //ex5.P2
+    const trocaCor = document.getElementsByClassName("main-content")[0];
+    trocaCor.style.backgroundColor = "green";
+    //ex6.P2
+    list.lastChild.remove();
+    list.lastChild.remove();
     
-
-
-
-
-
-
-
-
-      
   </script>
 </body>
   
