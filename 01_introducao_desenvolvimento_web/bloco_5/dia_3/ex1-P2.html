@@ -21,15 +21,12 @@
       <script>
           let div1 = document.getElementsByClassName("tarefa1")[0];
           div1.textContent = '';
-          let button = document.createElement("button");
-          document.querySelector(".tarefa1").appendChild(button);
-          button.innerHTML = "Botão"
-          button.addEventListener("click", function(){
+          let button1 = document.createElement("button");
+          document.querySelector(".tarefa1").appendChild(button1);
+          button1.innerHTML = "Botão"
+          button1.addEventListener("click", function(){
               alert ("Você clicou no botão");
           });
-
-
-
       </script>
       <hr />
       <h2>Tarefa 2</h2>
@@ -45,7 +42,17 @@
         exibir um alerta contendo a mensagem "Desconto de R$(resultado)", sendo
         <strong>discount</strong> o resultado da multiplicação.
       </p>
+      <div class="tarefa2"></div>
       <script language="javascript" type="text/javascript">
+        let productPrice = 59.99;
+        let discount = 0.30;
+        let button2 = document.createElement("button");
+        document.querySelector(".tarefa2").appendChild(button2);
+        button2.innerHTML = "Botão 2"
+        button2.addEventListener("click", function(){
+          let resultado = productPrice * discount;
+          alert( "Desconto de R$" + resultado + ".");
+        });        
         //JavaScript para a tarefa 2
         //JavaScript para a tarefa 2
         //JavaScript para a tarefa 2
