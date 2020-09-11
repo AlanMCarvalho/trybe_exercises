@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. Web Storage</title>
+    <style>
+        .seção1 {
+            position: fixed;
+            top:0px;
+            right: 0px;
+            left: 0px;
+            margin-top:auto;
+            border-top: black 2px solid;
+            border-bottom: black 2px solid;
+            background-color:grey;
+        }
+        #seção2 {
+            margin-top: 220px;
+        }
+        .div{
+            display: inline-block;
+            font-size: 20px;
+            text-decoration: underline;
+            margin-left: 100px;
+            text-align: center;
+        }
+        .div1 {
+            display: inline-block;
+        }
+        .div2 {
+            display: inline-block;
+        }
+        .paragrafo {
+            text-align: justify;
+        }
+        .titulo1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        .titulo2 {
+            text-align: left;
+            text-decoration:wavy;
+        }
+        .lista {
+            text-align: center;
+        }
+        li {
+            margin-bottom: 3px;
+            /*para remover os pontos pretos do <li>*/
+            list-style-type: none;
+        }
+        .botao {
+            width: 80px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            font-style: italic;
+            background-color: green;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            /*let buttons = document.querySelectorAll(".corDeFundo");
+            for (index=0; index<buttons.length; index+=1) {
+                buttons[i].addEventListener("click",)
+            }
+            */ 
+            //cor de fundo
+            let botaoCorDeFundoVerde = document.querySelector(".verde");
+            botaoCorDeFundoVerde.addEventListener("click", function() {
+                let seção2 =  document.querySelector("#seção2");
+                seção2.style.backgroundColor = "green";
+            });
+            let botaoCorDeFundoVermelho = document.querySelector(".vermelho");
+            botaoCorDeFundoVermelho.addEventListener("click", function() {
+                let seção2 =  document.querySelector("#seção2");
+                seção2.style.backgroundColor = "red";
+            });
+            let botaoCorDeFundoAzul = document.querySelector(".azul");
+            botaoCorDeFundoAzul.addEventListener("click", function() {
+                let seção2 =  document.querySelector("#seção2");
+                seção2.style.backgroundColor = "blue";
+            });
+            let botaoCorDeFundoYellow = document.querySelector(".amarelo");
+            botaoCorDeFundoYellow.addEventListener("click", function() {
+                let seção2 =  document.querySelector("#seção2");
+                seção2.style.backgroundColor = "yellow";
+            });
+
+            //cor da fonte
+            let botaoCorDaFonteVerde = document.querySelector(".verde1");
+            botaoCorDaFonteVerde.addEventListener("click", function() {
+                let seção2 =  document.querySelector("#seção2");
+                seção2.style.color = "green";
+            });
+            let botaoCorDaFonteVermelho = document.querySelector(".vermelho1");
+            botaoCorDaFonteVermelho.addEventListener("click", function() {
+                let seção2 =  document.querySelector("#seção2");
+                seção2.style.color = "red";
+            });
+            let botaoCorDaFonteAzul = document.querySelector(".azul1");
+            botaoCorDaFonteAzul.addEventListener("click", function() {
+                let seção2 =  document.querySelector("#seção2");
+                seção2.style.color = "blue";
+            });
+            let botaoCorDaFonteYellow = document.querySelector(".yellow1");
+            botaoCorDaFonteYellow.addEventListener("click", function() {
+                let seção2 =  document.querySelector("#seção2");
+                seção2.style.color = "yellow";
+            });
+            //tamanho da fonte
+            let botaoFonte12 = document.querySelector(".fonte12");
+            botaoFonte12.addEventListener("click", function() {
+                let paragrafos =  document.querySelector("#seção2");
+                paragrafos.style.fontSize = "12px";
+            });
+            let botaoFonte14 = document.querySelector(".fonte14");
+            botaoFonte14.addEventListener("click", function() {
+                let paragrafos =  document.querySelector("#seção2");
+                paragrafos.style.fontSize = "14px";
+            });
+            let botaoFonte16 = document.querySelector(".fonte16");
+            botaoFonte16.addEventListener("click", function() {
+                let paragrafos =  document.querySelector("#seção2");
+                paragrafos.style.fontSize = "16px";
+            });
+            let botaoFonte18 = document.querySelector(".fonte18");
+            botaoFonte18.addEventListener("click", function() {
+                let paragrafos =  document.querySelector("#seção2");
+                paragrafos.style.fontSize = "25px";
+            });
+            //espaço entre linhas
+            let botaoEspaco05 = document.querySelector(".espaço0-5");
+            botaoEspaco05.addEventListener("click", function() {
+                let paragrafos =  document.querySelector("#seção2");
+                paragrafos.style.lineHeight = "0.5";
+            });
+            let botaoEspaco1 = document.querySelector(".espaço1-0");
+            botaoEspaco1.addEventListener("click", function() {
+                let paragrafos =  document.querySelector("#seção2");
+                paragrafos.style.lineHeight = "1.0";
+            });
+            let botaoEspaco15 = document.querySelector(".espaço1-5");
+            botaoEspaco15.addEventListener("click", function() {
+                let paragrafos =  document.querySelector("#seção2");
+                paragrafos.style.lineHeight = "1.5";
+            });
+            let botaoEspaco2 = document.querySelector(".espaço2-0");
+            botaoEspaco2.addEventListener("click", function() {
+                let paragrafos =  document.querySelector("#seção2");
+                paragrafos.style.lineHeight = "2.0";
+            });
+
+
+
+        }
+
+    </script>
+        
+    
+   </head>
+<body>
+    <section class="seção1">
+        <div class="div div1">
+            <p>Cor de fundo</p>
+            <ul class="lista">
+                <li><button class="botao corDeFundo verde">Verde</button></li>
+                <li><button class="botao corDeFundo vermelho">Vermelho</button></li>
+                <li><button class="botao corDeFundo azul">Azul</button></li>
+                <li><button class="botao corDeFundo amarelo">Amarelo</button></li>
+            </ul>
+        </div>
+
+        <div class="div div2">
+            <p>Cor da fonte</p>
+            <ul class="lista">
+                <li><button class="botao corDaFonte verde1">Verde</button></li>
+                <li><button class="botao corDaFonte vermelho1">Vermelho</button></li>
+                <li><button class="botao corDaFonte azul1">Azul</button></li>
+                <li><button class="botao corDaFonte yellow1">Amarelo</button></li>
+            </ul>
+        </div>
+        <div class="div div3">
+            <p>Tamanho da fonte</p>
+            <ul class="lista">
+                <li><button class="botao fonte12">12px</button></li>
+                <li><button class="botao fonte14">14px</button></li>
+                <li><button class="botao fonte16">16px</button></li>
+                <li><button class="botao fonte18">18px</button></li>
+            </ul>
+        </div>
+        <div class="div div4">
+            <p>Espaçamento entre linhas</p>
+            <ul class="lista">
+                <li><button class="botao espaço0-5">0,5</button></li>
+                <li><button class="botao espaço1-0">1,0</button></li>
+                <li><button class="botao espaço1-5">1,5</button></li>
+                <li><button class="botao espaço2-0">2,0</button></li>
+            </ul>
+        </div>
+        <div class="div div5">
+            <p>Tipo da fonte</p>
+            <ul class="lista">
+                <li><button class="botao">Arial</button></li>
+                <li><button class="botao">Monospace</button></li>
+                <li><button class="botao">Arabic</button></li>
+                <li><button class="botao">outro</button></li>
+            </ul>
+        </div>
+    </section>
+    <section id="seção2">
+    <h1 class="titulo1">Lorem Ipsum</h1>
+        <h2 class="titulo1 titulo2">What is Lorem Ipsum?</h2>
+            <p class="paragrafo">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+
+        <h2 class="titulo1 titulo2">Why do we use it?</h2>
+            <p class="paragrafo">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                </p>
+
+
+        <h2 class="titulo1 titulo2">Where does it come from?</h2>
+            <p class="paragrafo">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                </p>
+
+            <p class="paragrafo">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                </p>
+
+        <h2 class="titulo1 titulo2">Where can I get some?</h2>
+            <p class="paragrafo">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                </p>
+    </section>
+    <footer>Página produzida para estilização do leitor. (By Alan Carvalho)</footer>
+</body>
+</html>
